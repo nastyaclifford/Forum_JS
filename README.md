@@ -21,8 +21,12 @@ Hometask, JS Week 12, Strings, numbers, Math
 
 4. Напишите код, который делает первый символ заглавным. Например, `"настя"` ⇒ `"Настя"`
 
-*let name = 'настя';
+let name = 'настя';
+
+
 name = name[0].toUpperCase() + name.slice(1);
+
+
 console.log(name);*
 
 5. Какой из вариантов округления делает это по математическим правилам?
