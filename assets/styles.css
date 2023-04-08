@@ -1,0 +1,58 @@
+body{
+    background-color: black;
+}
+.title,.form__title,.chat__title,.name__title,.photo__title,.comment__title,.form__submit-button,.userInfo__name,.display-comment {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title,.name__title,.photo__title,.comment__title,.form__submit-button,.display-comment{
+    color: white;
+}
+.container{
+    margin-left: 2rem;
+}
+.comments-section{
+    display:flex;
+    flex-direction: row;
+}
+.form__title,.chat__title,.userInfo__name{
+    color: rgb(93, 93, 216);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.form-name,.form-photo,.form-comment,.comments-display{
+    display:flex;
+    flex-direction: column;
+}
+.comments-section__form{
+    width: 50%;
+    margin-right: 5%;
+}
+.name__input,.photo__input,.comment__textarea{
+    height: 1.6rem;
+    background-color: black;
+    border: 1px rgb(93, 93, 216);
+    border-style: dashed;
+    outline:none;
+    color: white;
+    margin-top: 0.6rem;
+    margin-bottom: 2rem;
+}
+.comment__textarea{
+    height: 8rem;
+}
+.form__submit-button{
+    background-color: rgb(93, 93, 216);
+}
+.display-userInfo{
+    display:flex;
+    flex-direction: row;
+}
+.userInfo__photo{
+    width: 6rem;
+}
+.userInfo__name{
+    margin-left: 1rem;
+}
+.display-comment{
+    margin-top: 1rem;
+}

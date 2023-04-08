@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/normalize.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <title>Comments</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <h1 class="title">Сервис комменариев со спам фильтром</h1>
+        <div class="comments-section">
+          <div class="comments-section__form">
+            <p class="form__title">Оставьте Ваш комментарий</p>
+            <div class="form-name">
+              <label for="name" class="name__title">Введите Ваше ФИО:</label>
+              <input class="name__input" type="text" name="name" id="name" />
+            </div>
+            <div class="form-photo">
+              <label for="link" class="photo__title"
+                >Введите ссылку Вашего аватара:</label
+              >
+              <input class="photo__input" type="text" name="link" id="link" />
+            </div>
+            <div class="form-comment">
+              <label for="comment" class="comment__title"
+                >Введите Ваш комментарий:</label
+              >
+              <textarea
+                class="comment__textarea"
+                name="comment"
+                id="comment"
+              ></textarea>
+            </div>
+            <button id="button" class="form__submit-button">Отправить</button>
+          </div>
+          <div class="comments-section__chat">
+            <p class="chat__title">Чат</p>
+            <div class="comments-display">
+              <div class="display-userInfo">
+                <img
+                  src="https://www.zastavki.com/pictures/600x382/2014Drawn_wallpapers___Vector_Wallpapers_The_black_circle_and_blue_light_083377_33.jpg"
+                  alt="userPhoto"
+                  class="userInfo__photo"
+                  id="photo"
+                />
+                <p id="userName" class="userInfo__name"></p>
+              </div>
+              <div id="displayComment" class="display-comment">Комментарий</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
