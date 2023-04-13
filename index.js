@@ -17,15 +17,8 @@ link.onclick = function () {
 function checkSpam() {
   //функция по проверке спама
   let userComment = document.getElementById("comment").value; //задаем переменную для комментария и путь к ней
-  if (userComment.toLowerCase().includes("viagra")) {
-    //создаем условие поиска запрещенных слов и замены их
-    userComment = userComment.replace(/viagra/gi, "***");
-    document.getElementById("displayComment").innerHTML = userComment; //выводим строку с измененным словом
-  }
-  if (userComment.toLowerCase().includes("xxx")) {
-    userComment = userComment.replace(/xxx/gi, "***");
-    document.getElementById("displayComment").innerHTML = userComment; //выводим строку с измененным словом
-  } else document.getElementById("displayComment").innerHTML = userComment; //если не найдено совпадений, выводим неизмененный комментарий
+  userComment = userComment.replace(/viagra/gi, "***").replace(/xxx/gi, "***"); // заменяем найденные запрещенные слова
+  document.getElementById("displayComment").innerHTML = userComment; //выводим строку с измененным словом или оставляем прежний
 }
 
 button.onclick = function () {
