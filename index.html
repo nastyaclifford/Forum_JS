@@ -16,6 +16,23 @@
         <div class="comments-section">
           <div class="comments-section__form">
             <p class="form__title">Оставьте Ваш комментарий</p>
+            <div class="form-checkbox">
+              <label class="checkbox__title">Показывать Ваше имя?</label>
+              <input
+                class="checkbox_positive"
+                type="radio"
+                id="positive"
+                name="checkbox"
+              />
+              <label for="positive">Yes</label>
+              <input
+                class="checkbox_negative"
+                type="radio"
+                id="negative"
+                name="checkbox"
+              />
+              <label for="negative">No</label>
+            </div>
             <div class="form-name">
               <label for="name" class="name__title">Введите Ваше ФИО:</label>
               <input class="name__input" type="text" name="name" id="name" />
@@ -40,19 +57,7 @@
           </div>
           <div class="comments-section__chat">
             <p class="chat__title">Чат</p>
-            <div class="comments-display">
-              <div class="display-userInfo">
-                <div class="photo"></div>
-                <img
-                  src="https://www.zastavki.com/pictures/600x382/2014Drawn_wallpapers___Vector_Wallpapers_The_black_circle_and_blue_light_083377_33.jpg"
-                  alt="userPhoto"
-                  class="userInfo__photo"
-                  id="photo"
-                />
-                <p id="userName" class="userInfo__name"></p>
-              </div>
-              <div id="displayComment" class="display-comment">Комментарий</div>
-            </div>
+            <div class="comments-display"></div>
           </div>
         </div>
       </div>

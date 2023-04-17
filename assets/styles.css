@@ -1,10 +1,10 @@
 body{
     background-color: black;
 }
-.title,.form__title,.chat__title,.name__title,.photo__title,.comment__title,.form__submit-button,.userInfo__name,.display-comment {
+.title,.form__title,.chat__title,.form-checkbox,.name__title,.photo__title,.comment__title,.form__submit-button,.userInfo__name,.display-date,.display-comment {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.title,.name__title,.photo__title,.comment__title,.form__submit-button,.display-comment{
+.title,.form-checkbox,.name__title,.photo__title,.comment__title,.form__submit-button,.display-comment{
     color: white;
 }
 .container{
@@ -14,10 +14,16 @@ body{
     display:flex;
     flex-direction: row;
 }
-.form__title,.chat__title,.userInfo__name{
+.form__title,.chat__title{
     color: rgb(93, 93, 216);
     font-weight: 500;
     font-size: 1.5rem;
+}
+.form-checkbox{
+    margin-bottom: 2rem;
+}
+.checkbox_positive{
+    margin-left: 2rem;
 }
 .form-name,.form-photo,.form-comment,.comments-display{
     display:flex;
@@ -43,16 +49,34 @@ body{
 .form__submit-button{
     background-color: rgb(93, 93, 216);
 }
+.comments-display{
+    display:flex;
+    flex-direction: column;
+    width: 40rem;
+}
 .display-userInfo{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
+    
 }
+.userInfo_profile{
+    display:flex;
+    flex-direction: row;}
+
 .userInfo__photo{
     width: 6rem;
 }
 .userInfo__name{
     margin-left: 1rem;
+    color: rgb(93, 93, 216);
+}
+.display-date{
+    width: 15rem;
+    color: rgb(93, 93, 216);
+    font-size: 0.7rem;
 }
 .display-comment{
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
