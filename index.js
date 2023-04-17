@@ -68,22 +68,25 @@ let getAvatar = () => {
   //функция получить ссылку на аватар
   let photoLink = document.getElementById("link").value; // задаем переменную для ссылки на аватар пользователя
   if (photoLink.length === 0) {
+    //создаем условие, которое проверяет, если поле для ссылки аватара пустое, то выполняется условие
     const arr = [
+      //создаем массив из картинок, которые будут выводится в рандомном порядке
       "assets/images/greyCat.jpg",
       "assets/images/redCat.jpg",
       "assets/images/softCat.jpg",
       "assets/images/tigreCat.jpg",
       "assets/images/littleCat.jpg",
     ];
-    let i = Math.floor(Math.random() * 5);
-    let randomPic = arr[i];
-    return `<div class="userPhoto"><img 
+    let i = Math.floor(Math.random() * 5); // задаем переменную для вычисления рандомного номера картинки
+    let randomPic = arr[i]; // задаем переменную для рандомной картинки и возвращаем рандомную картинку
+    return `<div class="userPhoto"><img />
   src='${randomPic}' 
   alt="userPhoto"
   class="userInfo__photo"
   id="photo"
 /></div>`;
   } else {
+    // иначе возвращаем ссылку на картинку, которую вставил пользователь
     return `<div class="userPhoto"><img 
   src='${photoLink}' 
   alt="userPhoto"
@@ -93,7 +96,7 @@ let getAvatar = () => {
   }
 };
 
-let totalStringVDom = " ";
+let totalStringVDom = " "; // задаем переменную, куда будет склеиваться разметка для каждого нового комментария
 
 button.onclick = function () {
   let newDate = getDate(); //возвращает разметку даты
@@ -107,5 +110,5 @@ button.onclick = function () {
     ${newDate}</div></div><div class="display-comment">
     ${fixedCom}</div>
   </div>` + totalStringVDom;
-  document.querySelector(".comments-display").innerHTML = totalStringVDom;
+  document.querySelector(".comments-display").innerHTML = totalStringVDom; // выводим комментарий
 };
