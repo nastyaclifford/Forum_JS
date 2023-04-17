@@ -79,7 +79,7 @@ let getAvatar = () => {
     ];
     let i = Math.floor(Math.random() * 5); // задаем переменную для вычисления рандомного номера картинки
     let randomPic = arr[i]; // задаем переменную для рандомной картинки и возвращаем рандомную картинку
-    return `<div class="userPhoto"><img />
+    return `<div class="userPhoto"> <img 
   src='${randomPic}' 
   alt="userPhoto"
   class="userInfo__photo"
