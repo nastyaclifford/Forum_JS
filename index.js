@@ -12,6 +12,8 @@ showName.addEventListener("click", () => {
   //функция, которая при отмечании Yes возвращает блок с полем ввода для имени
   let nameField = document.querySelector(".form-name");
   nameField.style.display = "";
+  let nameInput = document.querySelector(".name__input");
+  nameInput.value = " ";
 });
 
 link.onclick = function () {
