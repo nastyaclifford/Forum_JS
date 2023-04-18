@@ -5,6 +5,8 @@ removeName.addEventListener("click", () => {
   //функция, которая при отмечании No убирает блок с полем ввода для имени
   let nameField = document.querySelector(".form-name");
   nameField.style.display = "None";
+  let nameInput = document.querySelector(".name__input");
+  nameInput.value = "username";
 });
 showName.addEventListener("click", () => {
   //функция, которая при отмечании Yes возвращает блок с полем ввода для имени
@@ -118,15 +120,15 @@ const formatDate = (date) => {
   let diff = new Date() - date; // узнаем разницу между текущей датой и тем, когда оставили комментарий в миллисекундах
   if (diff < 1000) {
     //условие, если разница меньше секунды, то выводим "прямо сейчас" (1 сек = 1000 миллисек)
-    console.log("прямо сейчас");
+    return "прямо сейчас";
   } else if (diff < 60000) {
     //условие, если разница меньше минуты, то выводим `${sec} сек. назад` (1 мин = 60000 миллисек)
     let sec = diff / 1000;
-    console.log(`${sec} сек. назад`);
+    return `${sec} сек. назад`;
   } else if (diff < 3600000) {
     //условие, если разница меньше часа, то выводим `${min} мин. назад` (1 час = 3600000 миллисек)
     let min = diff / 1000 / 60;
-    console.log(`${min} мин. назад`);
+    return `${min} мин. назад`;
   } else {
     // иначе, если больше часа, то выводим в формате день.месяц.год часы:минуты
     let today = new Date(date);
@@ -135,9 +137,9 @@ const formatDate = (date) => {
     let year = today.getFullYear();
     let hours = today.getHours();
     let minutes = today.getMinutes();
-    console.log(`${day}.${month}.${year} ${hours}:${minutes}`); //день.месяц.год часы:минуты
+    return `${day}.${month}.${year} ${hours}:${minutes}`; //день.месяц.год часы:минуты
   }
 };
 console.log(new Date()); // проверяю текущую дату
-console.log(Date.parse("2023-04-17T15:04:00")); //вывожу в консоль прошедшую дату, с которой хочу сравнить текущую, чтобы узнать миллисекунды и подставить это значением в formatDate(date);
-formatDate(1681765440000); // подставляю значение и смотрю результат в консоли
+console.log(Date.parse("2023-04-16T15:04:00")); //вывожу в консоль прошедшую дату, с которой хочу сравнить текущую, чтобы узнать миллисекунды и подставить это значением в formatDate(date);
+formatDate(1681679040000); // подставляю значение и смотрю результат в консоли
